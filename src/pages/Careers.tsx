@@ -220,7 +220,7 @@ const Careers = () => {
                 Join Our <span className="text-luxury-gold">Team</span>
               </h1>
               <p className="text-xl text-white">
-                Build your career with Aventis Auto Group
+                Build your career with AVNTS Auto Group
               </p>
             </div>
           </div>
@@ -234,7 +234,7 @@ const Careers = () => {
                 Why Work With Us?
               </h2>
               <p className="text-gray-600 max-w-2xl mx-auto">
-                At Aventis Auto Group, we believe our employees are our greatest asset. We provide a supportive environment where you can grow and succeed.
+                At AVNTS Auto Group, we believe our employees are our greatest asset. We provide a supportive environment where you can grow and succeed.
               </p>
             </div>
 
@@ -328,7 +328,7 @@ const Careers = () => {
                 className="bg-luxury-gold hover:bg-yellow-600"
                 asChild
               >
-                <a href="mailto:careers@aventisautogroup.com">
+                <a href="mailto:careers@AVNTSautogroup.com">
                   Send Your Resume
                 </a>
               </Button>

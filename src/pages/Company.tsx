@@ -12,7 +12,7 @@ const Company = () => {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-2xl animate-fade-in">
             <h1 className="text-4xl md:text-5xl font-serif font-bold text-white mb-4">
-              About <span className="text-luxury-gold">Aventis</span> Autogroup
+              About <span className="text-luxury-gold">AVNTS</span> Autogroup
             </h1>
             <p className="text-xl text-white">
               Your premier destination for automotive excellence
@@ -30,21 +30,21 @@ const Company = () => {
                 <Users size={32} className="text-luxury-black" />
               </div>
             </div>
-            
+
             <p className="text-xl text-center mb-10">
-              At Aventis Autogroup, we are more than a dealership or rental company — we are curators
+              At AVNTS Autogroup, we are more than a dealership or rental company — we are curators
               of automotive excellence. From first contact to final handover, our mission is to offer an
               experience as refined as the vehicles we provide.
             </p>
-            
+
             <div className="text-center mb-12">
               <h2 className="text-2xl font-serif font-bold text-luxury-gold italic">
                 Luxury is the standard. Service is the signature.
               </h2>
             </div>
-            
+
             <p className="text-lg text-luxury-gray">
-              At Aventis Autogroup, we've redefined the automotive experience by bringing every service
+              At AVNTS Autogroup, we've redefined the automotive experience by bringing every service
               under one roof. From luxury rentals and seamless financing to expert detailing, insurance
               solutions, and exclusive vehicle sourcing — we offer a complete suite designed for ultimate
               convenience. Our mission is to simplify car ownership and elevate every journey, giving you

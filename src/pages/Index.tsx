@@ -35,7 +35,7 @@ const Index = () => {
               Dream it, Rent it, Own it.
             </p>
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-luxury-black mb-6">
-              At Aventis Autogroup
+              At AVNTS Autogroup
             </h2>
             <p className="text-xl text-luxury-gray mb-8">
               We believe luxury is more than a destination — it's a journey. Whether
@@ -59,14 +59,14 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <h2 className="section-title text-center text-luxury-black">Featured Vehicles</h2>
           <p className="section-subtitle text-center mb-12">Check out some of our most popular options</p>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Car 1 */}
             <div className="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:-translate-y-2">
               <div className="h-64 overflow-hidden">
-                <img 
-                  src="STEV4591.jpg" 
-                  alt="Mercedes Benz CLA45 AMG" 
+                <img
+                  src="STEV4591.jpg"
+                  alt="Mercedes Benz CLA45 AMG"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -81,13 +81,13 @@ const Index = () => {
                 </div>
               </div>
             </div>
-            
+
             {/* Car 2 */}
             <div className="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:-translate-y-2">
               <div className="h-64 overflow-hidden">
-                <img 
-                  src="STEV4545.jpg" 
-                  alt="Toyota Rav4" 
+                <img
+                  src="STEV4545.jpg"
+                  alt="Toyota Rav4"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -102,13 +102,13 @@ const Index = () => {
                 </div>
               </div>
             </div>
-            
+
             {/* Car 3 */}
             <div className="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:-translate-y-2">
               <div className="h-64 overflow-hidden">
-                <img 
-                  src="STEV4627.jpg" 
-                  alt="Mercedes Benz E43 AMG" 
+                <img
+                  src="STEV4627.jpg"
+                  alt="Mercedes Benz E43 AMG"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -124,7 +124,7 @@ const Index = () => {
               </div>
             </div>
           </div>
-          
+
           <div className="text-center mt-12">
             <Link to="/cars" className="gold-button">
               View All Vehicles
@@ -136,9 +136,9 @@ const Index = () => {
       {/* Why Choose Us Section */}
       <section className="py-16 bg-gray-100">
         <div className="container mx-auto px-4">
-          <h2 className="section-title text-center text-luxury-black">Why Choose Aventis</h2>
+          <h2 className="section-title text-center text-luxury-black">Why Choose AVNTS</h2>
           <p className="section-subtitle text-center mb-12">Honest deals and quality service</p>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center p-6 bg-white rounded-lg shadow-md">
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-luxury-gold mb-4">
@@ -147,7 +147,7 @@ const Index = () => {
               <h3 className="text-xl font-serif font-bold mb-3">Convenient Location</h3>
               <p className="text-luxury-gray">Located right in your neighborhood with easy access and plenty of parking.</p>
             </div>
-            
+
             <div className="text-center p-6 bg-white rounded-lg shadow-md">
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-luxury-gold mb-4">
                 <Clock size={32} className="text-luxury-black" />
@@ -155,7 +155,7 @@ const Index = () => {
               <h3 className="text-xl font-serif font-bold mb-3">Flexible Hours</h3>
               <p className="text-luxury-gray">Open evenings and weekends to accommodate your busy schedule.</p>
             </div>
-            
+
             <div className="text-center p-6 bg-white rounded-lg shadow-md">
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-luxury-gold mb-4">
                 <Shield size={32} className="text-luxury-black" />
@@ -171,8 +171,8 @@ const Index = () => {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="section-title text-center text-luxury-black">What Our Customers Say</h2>
-          <p className="section-subtitle text-center mb-12">Hear from those who've experienced Aventis excellence</p>
-          
+          <p className="section-subtitle text-center mb-12">Hear from those who've experienced AVNTS excellence</p>
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-gray-50 p-6 rounded-lg shadow-md">
               <div className="flex mb-4">
@@ -181,11 +181,11 @@ const Index = () => {
                 ))}
               </div>
               <p className="text-luxury-gray mb-4">
-                "Exceptional service from start to finish. The team at Aventis made my car rental experience seamless and stress-free. Highly recommend!"
+                "Exceptional service from start to finish. The team at AVNTS made my car rental experience seamless and stress-free. Highly recommend!"
               </p>
               <div className="font-medium text-luxury-black">Sarah M.</div>
             </div>
-            
+
             <div className="bg-gray-50 p-6 rounded-lg shadow-md">
               <div className="flex mb-4">
                 {[...Array(5)].map((_, i) => (
@@ -197,7 +197,7 @@ const Index = () => {
               </p>
               <div className="font-medium text-luxury-black">Michael R.</div>
             </div>
-            
+
             <div className="bg-gray-50 p-6 rounded-lg shadow-md">
               <div className="flex mb-4">
                 {[...Array(5)].map((_, i) => (

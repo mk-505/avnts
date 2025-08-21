@@ -18,7 +18,7 @@ const Layout: React.FC<{
         <div className="container mx-auto px-4 py-4">
           <div className="flex justify-between items-center">
             <Link to="/" className="flex items-center">
-              <img alt="Aventis Logo" className="h-16 mr-2"
+              <img alt="AVNTS Logo" className="h-16 mr-2"
                 src="/lovable-uploads/1ef1933c-1df2-4936-a4b4-1824478fc430.png" />
             </Link>
 
@@ -217,7 +217,7 @@ const Layout: React.FC<{
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
               <div className="flex items-center mb-4">
-                <img src="/lovable-uploads/0b6b2fce-729b-418f-b3f6-9d7298d0a1aa.png" alt="Aventis Logo" className="h-96 mr-2"
+                <img src="/lovable-uploads/0b6b2fce-729b-418f-b3f6-9d7298d0a1aa.png" alt="AVNTS Logo" className="h-96 mr-2"
                 />
               </div>
             </div>

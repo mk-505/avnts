@@ -9,20 +9,20 @@ const DetailingWrappingTinting = () => {
         <div className="max-w-4xl mx-auto">
           <h1 className="section-title text-center">Detailing, Wrapping & Tinting</h1>
           <p className="section-subtitle text-center">Premium care for luxury vehicles</p>
-          
+
           <div className="bg-white shadow-lg rounded-lg overflow-hidden mt-12">
             <div className="p-8">
               <div className="flex items-center mb-6">
                 <Wrench size={32} className="text-luxury-gold mr-4" />
                 <h2 className="text-2xl font-serif font-bold">Perfection in Every Detail</h2>
               </div>
-              
+
               <p className="text-gray-700 mb-8">
-                Preserve and elevate the look of your car with our professional-grade services. Aventis
+                Preserve and elevate the look of your car with our professional-grade services. AVNTS
                 Autogroup offers detailing, vehicle wrapping, and premium tinting — all executed to the
                 highest industry standards.
               </p>
-              
+
               <div className="bg-gray-50 p-6 rounded-lg mb-8">
                 <h3 className="font-bold text-xl mb-4">Our Services:</h3>
                 <ul className="space-y-3">
@@ -44,9 +44,9 @@ const DetailingWrappingTinting = () => {
                   </li>
                 </ul>
               </div>
-              
+
               <div className="text-center mt-8">
-                <a 
+                <a
                   href="https://calendly.com/"
                   target="_blank"
                   rel="noopener noreferrer"

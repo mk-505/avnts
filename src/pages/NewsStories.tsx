@@ -6,7 +6,7 @@ const NewsStories = () => {
   const newsItems = [
     {
       id: 1,
-      title: "Aventis Autogroup Expands Fleet with Latest Luxury Models",
+      title: "AVNTS Autogroup Expands Fleet with Latest Luxury Models",
       excerpt: "We're excited to announce the addition of the newest luxury vehicles to our rental and sales inventory, offering our customers access to the latest automotive technology and style.",
       date: "March 15, 2024",
       readTime: "3 min read",
@@ -39,7 +39,7 @@ const NewsStories = () => {
     {
       id: 5,
       title: "The Future of Electric Luxury Vehicles",
-      excerpt: "Explore the latest developments in electric luxury vehicles and how Aventis Autogroup is preparing for the future of sustainable luxury transportation.",
+      excerpt: "Explore the latest developments in electric luxury vehicles and how AVNTS Autogroup is preparing for the future of sustainable luxury transportation.",
       date: "February 12, 2024",
       readTime: "4 min read",
       image: "/ferrari-4.jpg"
@@ -47,7 +47,7 @@ const NewsStories = () => {
     {
       id: 6,
       title: "Exclusive Events: Behind the Scenes at Luxury Car Shows",
-      excerpt: "Get an insider's look at the most prestigious automotive events and how Aventis Autogroup participates in showcasing the finest vehicles in the industry.",
+      excerpt: "Get an insider's look at the most prestigious automotive events and how AVNTS Autogroup participates in showcasing the finest vehicles in the industry.",
       date: "February 5, 2024",
       readTime: "3 min read",
       image: "/audi-3.jpg"
@@ -65,7 +65,7 @@ const NewsStories = () => {
               News & <span className="text-luxury-gold">Stories</span>
             </h1>
             <p className="text-xl text-white">
-              Stay updated with the latest from Aventis Autogroup
+              Stay updated with the latest from AVNTS Autogroup
             </p>
           </div>
         </div>
@@ -114,7 +114,7 @@ const NewsStories = () => {
               Stay in the Loop
             </h2>
             <p className="text-lg text-luxury-gray mb-8">
-              Subscribe to our newsletter to receive the latest news, updates, and exclusive offers from Aventis Autogroup.
+              Subscribe to our newsletter to receive the latest news, updates, and exclusive offers from AVNTS Autogroup.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
               <input

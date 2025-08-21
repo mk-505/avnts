@@ -12,29 +12,27 @@ const Contact = () => {
     subject: '',
     message: '',
   });
-  
+
   const [isSubmitting, setIsSubmitting] = useState(false);
   const formRef = useRef<HTMLFormElement>(null);
-  
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
-  
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     const templateParams = {
-      to_email: 'contact@aventisautogroup.com',
-      from_name: formData.name,
+      from_firstName: formData.name.split(' ')[0] || formData.name,
       from_email: formData.email,
-      subject: formData.subject,
-      message: formData.message,
-      phone: formData.phone
+      from_number: formData.phone,
+      user_message: formData.message
     };
-    
-    emailjs.send('service_kgn8c2h', 'template_l4trm4e', templateParams, 'lo3b3mHayWd-jELGp')
+
+    emailjs.send('service_jjyr7p5', 'template_sco5gc2', templateParams, 'E32bROpCInXRA6Udp')
       .then(() => {
         toast.success('Message sent successfully! We will contact you shortly.');
         setFormData({
@@ -52,7 +50,7 @@ const Contact = () => {
         setIsSubmitting(false);
       });
   };
-  
+
   return (
     <Layout>
       {/* Hero Section */}
@@ -90,7 +88,7 @@ const Contact = () => {
                       required
                     />
                   </div>
-                  
+
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium text-luxury-gray mb-1">Email Address *</label>
                     <input
@@ -103,7 +101,7 @@ const Contact = () => {
                       required
                     />
                   </div>
-                  
+
                   <div>
                     <label htmlFor="phone" className="block text-sm font-medium text-luxury-gray mb-1">Phone Number</label>
                     <input
@@ -115,7 +113,7 @@ const Contact = () => {
                       onChange={handleChange}
                     />
                   </div>
-                  
+
                   <div>
                     <label htmlFor="subject" className="block text-sm font-medium text-luxury-gray mb-1">Subject *</label>
                     <select
@@ -134,7 +132,7 @@ const Contact = () => {
                       <option value="Other">Other</option>
                     </select>
                   </div>
-                  
+
                   <div className="md:col-span-2">
                     <label htmlFor="message" className="block text-sm font-medium text-luxury-gray mb-1">Message *</label>
                     <textarea
@@ -149,9 +147,9 @@ const Contact = () => {
                     ></textarea>
                   </div>
                 </div>
-                
-                <button 
-                  type="submit" 
+
+                <button
+                  type="submit"
                   className="gold-button flex items-center justify-center"
                   disabled={isSubmitting}
                 >
@@ -177,10 +175,10 @@ const Contact = () => {
             <div>
               <h2 className="text-3xl font-serif font-bold mb-6">Get in Touch</h2>
               <p className="text-luxury-gray mb-8">
-                Whether you have questions about our vehicles, need assistance with a reservation, 
+                Whether you have questions about our vehicles, need assistance with a reservation,
                 or want to discuss personalized services, our team is ready to assist you.
               </p>
-              
+
               <div className="space-y-6">
                 <div className="flex items-start">
                   <div className="flex-shrink-0 w-12 h-12 bg-luxury-gold rounded-full flex items-center justify-center mr-4">
@@ -192,7 +190,7 @@ const Contact = () => {
                     <p className="text-luxury-gray">Scarborough, ON, M1L 4R1</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start">
                   <div className="flex-shrink-0 w-12 h-12 bg-luxury-gold rounded-full flex items-center justify-center mr-4">
                     <Phone className="text-luxury-black" />
@@ -202,7 +200,7 @@ const Contact = () => {
                     <p className="text-luxury-gray">Main: (437) 553-9211</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start">
                   <div className="flex-shrink-0 w-12 h-12 bg-luxury-gold rounded-full flex items-center justify-center mr-4">
                     <Mail className="text-luxury-black" />
@@ -212,7 +210,7 @@ const Contact = () => {
                     <p className="text-luxury-gray">contact@avntsautogroup.com</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start">
                   <div className="flex-shrink-0 w-12 h-12 bg-luxury-gold rounded-full flex items-center justify-center mr-4">
                     <Clock className="text-luxury-black" />
@@ -226,18 +224,18 @@ const Contact = () => {
                 </div>
               </div>
             </div>
-            
+
             {/* Map */}
             <div className="rounded-lg overflow-hidden shadow-md h-[500px] bg-gray-200">
-              <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2883.086188017623!2d-79.28463995797225!3d43.72953637339704!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4ce0a5fe8606f%3A0x72ca8577a1473cd6!2s1940%20Eglinton%20Ave%20E%2C%20Scarborough%2C%20ON%20M1L%204R1!5e0!3m2!1sen!2sca!4v1744432414477!5m2!1sen!2sca" 
-                width="100%" 
-                height="100%" 
-                style={{ border: 0 }} 
-                allowFullScreen 
-                loading="lazy" 
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2883.086188017623!2d-79.28463995797225!3d43.72953637339704!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4ce0a5fe8606f%3A0x72ca8577a1473cd6!2s1940%20Eglinton%20Ave%20E%2C%20Scarborough%2C%20ON%20M1L%204R1!5e0!3m2!1sen!2sca!4v1744432414477!5m2!1sen!2sca"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Aventis Location"
+                title="AVNTS Location"
               ></iframe>
             </div>
           </div>

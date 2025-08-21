@@ -26,20 +26,20 @@ const CarSalesFinancing = () => {
         <div className="max-w-4xl mx-auto">
           <h1 className="section-title text-center">Vehicle Sales & Financing</h1>
           <p className="section-subtitle text-center">Affordable solutions to own your dream vehicle</p>
-          
+
           <div className="bg-white shadow-lg rounded-lg overflow-hidden mt-12">
             <div className="p-8">
               <div className="flex items-center mb-6">
                 <DollarSign size={32} className="text-luxury-gold mr-4" />
                 <h2 className="text-2xl font-serif font-bold">Own the Exceptional</h2>
               </div>
-              
+
               <p className="text-gray-700 mb-8">
-                Buying a car should feel as luxurious as driving it. At Aventis, we offer an exclusive selection
+                Buying a car should feel as luxurious as driving it. At AVNTS, we offer an exclusive selection
                 of high-end vehicles, paired with expert guidance and flexible financing designed to fit your
                 lifestyle.
               </p>
-              
+
               <div className="bg-gray-50 p-6 rounded-lg mb-8">
                 <h3 className="font-bold text-xl mb-4">What We Offer:</h3>
                 <ul className="space-y-3">
@@ -61,19 +61,19 @@ const CarSalesFinancing = () => {
                   </li>
                 </ul>
               </div>
-              
+
               <div className="bg-gray-100 p-6 rounded-lg mb-8">
                 <h3 className="font-bold text-xl mb-3">Flexible Approval Process</h3>
                 <p className="text-gray-700 mb-2">
-                  We believe in no-tension approvals. Our financing process is designed to be straightforward 
+                  We believe in no-tension approvals. Our financing process is designed to be straightforward
                   and accommodating, working with multiple lenders to find the best solution for your situation.
                 </p>
               </div>
-              
+
               <p className="text-center text-xl font-serif text-luxury-gold italic mt-6">
                 Dream it. Own it. Live it.
               </p>
-              
+
               <div className="text-center mt-8">
                 <Link to="/credit" className="gold-button">Apply for Financing</Link>
               </div>

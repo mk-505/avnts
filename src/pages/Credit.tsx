@@ -35,24 +35,24 @@ const Credit = () => {
     comments: '',
     vehicleOfInterest: '',
   });
-  
+
   const [showPreviousAddress, setShowPreviousAddress] = useState(false);
   const [showPreviousEmployment, setShowPreviousEmployment] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const formRef = useRef<HTMLFormElement>(null);
-  
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
-    
+
     // Check address duration
     if (name === 'addressYears' || name === 'addressMonths') {
       const years = Number(name === 'addressYears' ? value : formData.addressYears) || 0;
       const months = Number(name === 'addressMonths' ? value : formData.addressMonths) || 0;
       setShowPreviousAddress(years * 12 + months < 24);
     }
-    
+
     // Check employment duration
     if (name === 'employmentYears' || name === 'employmentMonths') {
       const years = Number(name === 'employmentYears' ? value : formData.employmentYears) || 0;
@@ -64,7 +64,7 @@ const Credit = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     const templateParams = {
       from_firstName: formData.firstName,
       from_lastName: formData.lastName,
@@ -94,13 +94,13 @@ const Credit = () => {
       from_comments: formData.comments || 'N/A',
       from_vehicleOfInterest: formData.vehicleOfInterest || 'N/A'
     };
-    
-    emailjs.send('service_uh81mqr', 'template_r82bkml', templateParams, 'lo3b3mHayWd-jELGp')
+
+    emailjs.send('service_jjyr7p5', 'template_bbsmfnw', templateParams, 'E32bROpCInXRA6Udp')
       .then(() => {
         setSubmitted(true);
         toast.success('Credit application submitted successfully!');
         setIsSubmitting(false);
-        
+
         setTimeout(() => {
           setSubmitted(false);
           setFormData({
@@ -178,10 +178,10 @@ const Credit = () => {
             ) : (
               <form ref={formRef} onSubmit={handleSubmit} className="p-6 md:p-8">
                 <h2 className="text-2xl font-serif font-bold mb-6 text-center">Credit Application Form</h2>
-                
+
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
                   <h3 className="text-xl font-bold col-span-full mb-2">Personal Information</h3>
-                  
+
                   <div>
                     <label htmlFor="firstName" className="block text-sm font-medium text-luxury-gray mb-1">First Name *</label>
                     <input
@@ -194,7 +194,7 @@ const Credit = () => {
                       required
                     />
                   </div>
-                  
+
                   <div>
                     <label htmlFor="lastName" className="block text-sm font-medium text-luxury-gray mb-1">Last Name *</label>
                     <input
@@ -207,7 +207,7 @@ const Credit = () => {
                       required
                     />
                   </div>
-                  
+
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium text-luxury-gray mb-1">Email Address *</label>
                     <input
@@ -220,7 +220,7 @@ const Credit = () => {
                       required
                     />
                   </div>
-                  
+
                   <div>
                     <label htmlFor="phone" className="block text-sm font-medium text-luxury-gray mb-1">Phone Number *</label>
                     <input
@@ -233,12 +233,12 @@ const Credit = () => {
                       required
                     />
                   </div>
-                  
+
                   {/* Citizenship Status */}
                   <div className="col-span-full">
                     <label className="block text-sm font-medium text-luxury-gray mb-1">Citizenship Status *</label>
-                    <Select 
-                      name="citizenshipStatus" 
+                    <Select
+                      name="citizenshipStatus"
                       onValueChange={(value) => handleChange({ target: { name: 'citizenshipStatus', value } } as any)}
                     >
                       <SelectTrigger>
@@ -253,7 +253,7 @@ const Credit = () => {
                       </SelectContent>
                     </Select>
                   </div>
-                  
+
                   {/* Current Address */}
                   <div className="col-span-full">
                     <label htmlFor="address" className="block text-sm font-medium text-luxury-gray mb-1">Current Address *</label>
@@ -267,7 +267,7 @@ const Credit = () => {
                       required
                     />
                   </div>
-                  
+
                   {/* Address Duration */}
                   <div>
                     <label className="block text-sm font-medium text-luxury-gray mb-1">Years at Current Address *</label>
@@ -281,7 +281,7 @@ const Credit = () => {
                       required
                     />
                   </div>
-                  
+
                   <div>
                     <label className="block text-sm font-medium text-luxury-gray mb-1">Months at Current Address *</label>
                     <input
@@ -295,7 +295,7 @@ const Credit = () => {
                       required
                     />
                   </div>
-                  
+
                   {/* Previous Address (conditional) */}
                   {showPreviousAddress && (
                     <>
@@ -311,7 +311,7 @@ const Credit = () => {
                           required
                         />
                       </div>
-                      
+
                       <div>
                         <label className="block text-sm font-medium text-luxury-gray mb-1">Years at Previous Address *</label>
                         <input
@@ -324,7 +324,7 @@ const Credit = () => {
                           required
                         />
                       </div>
-                      
+
                       <div>
                         <label className="block text-sm font-medium text-luxury-gray mb-1">Months at Previous Address *</label>
                         <input
@@ -340,10 +340,10 @@ const Credit = () => {
                       </div>
                     </>
                   )}
-                  
+
                   {/* Employment Details */}
                   <h3 className="text-xl font-bold col-span-full mb-2 mt-4">Employment Details</h3>
-                  
+
                   <div>
                     <label htmlFor="employer" className="block text-sm font-medium text-luxury-gray mb-1">Current Employer *</label>
                     <input
@@ -356,7 +356,7 @@ const Credit = () => {
                       required
                     />
                   </div>
-                  
+
                   <div>
                     <label htmlFor="position" className="block text-sm font-medium text-luxury-gray mb-1">Position/Title *</label>
                     <input
@@ -369,7 +369,7 @@ const Credit = () => {
                       required
                     />
                   </div>
-                  
+
                   <div>
                     <label className="block text-sm font-medium text-luxury-gray mb-1">Years at Current Employer *</label>
                     <input
@@ -382,7 +382,7 @@ const Credit = () => {
                       required
                     />
                   </div>
-                  
+
                   <div>
                     <label className="block text-sm font-medium text-luxury-gray mb-1">Months at Current Employer *</label>
                     <input
@@ -396,7 +396,7 @@ const Credit = () => {
                       required
                     />
                   </div>
-                  
+
                   {/* Previous Employment (conditional) */}
                   {showPreviousEmployment && (
                     <>
@@ -412,7 +412,7 @@ const Credit = () => {
                           required
                         />
                       </div>
-                      
+
                       <div>
                         <label htmlFor="previousPosition" className="block text-sm font-medium text-luxury-gray mb-1">Previous Position *</label>
                         <input
@@ -425,7 +425,7 @@ const Credit = () => {
                           required
                         />
                       </div>
-                      
+
                       <div>
                         <label className="block text-sm font-medium text-luxury-gray mb-1">Years at Previous Employer *</label>
                         <input
@@ -438,7 +438,7 @@ const Credit = () => {
                           required
                         />
                       </div>
-                      
+
                       <div>
                         <label className="block text-sm font-medium text-luxury-gray mb-1">Months at Previous Employer *</label>
                         <input
@@ -454,10 +454,10 @@ const Credit = () => {
                       </div>
                     </>
                   )}
-                  
+
                   {/* Financial Information */}
                   <h3 className="text-xl font-bold col-span-full mb-2 mt-4">Financial Information</h3>
-                  
+
                   <div>
                     <label htmlFor="income" className="block text-sm font-medium text-luxury-gray mb-1">Monthly Income (CAD) *</label>
                     <input
@@ -471,7 +471,7 @@ const Credit = () => {
                       required
                     />
                   </div>
-                  
+
                   <div>
                     <label htmlFor="additionalIncome" className="block text-sm font-medium text-luxury-gray mb-1">Additional Income (if any)</label>
                     <input
@@ -484,7 +484,7 @@ const Credit = () => {
                       onChange={handleChange}
                     />
                   </div>
-                  
+
                   <div className="col-span-full">
                     <label htmlFor="references" className="block text-sm font-medium text-luxury-gray mb-1">References</label>
                     <textarea
@@ -497,7 +497,7 @@ const Credit = () => {
                       onChange={handleChange}
                     ></textarea>
                   </div>
-                  
+
                   <div className="col-span-full">
                     <label htmlFor="comments" className="block text-sm font-medium text-luxury-gray mb-1">Additional Comments</label>
                     <textarea
@@ -510,10 +510,10 @@ const Credit = () => {
                       onChange={handleChange}
                     ></textarea>
                   </div>
-                  
+
                   {/* Vehicle Information */}
                   <h3 className="text-xl font-bold col-span-full mb-2 mt-4">Vehicle Information</h3>
-                  
+
                   <div className="col-span-full mb-6">
                     <label htmlFor="vehicleOfInterest" className="block text-sm font-medium text-luxury-gray mb-1">Vehicle of Interest</label>
                     <textarea
@@ -527,7 +527,7 @@ const Credit = () => {
                     ></textarea>
                   </div>
                 </div>
-                
+
                 <div className="mb-6">
                   <div className="flex items-start">
                     <input
@@ -541,10 +541,10 @@ const Credit = () => {
                     </label>
                   </div>
                 </div>
-                
+
                 <div className="text-center">
-                  <button 
-                    type="submit" 
+                  <button
+                    type="submit"
                     className="gold-button w-full md:w-auto"
                     disabled={isSubmitting}
                   >
@@ -585,7 +585,7 @@ const Credit = () => {
                   <p className="ml-5 text-sm mt-1">Upon approval, you can select the luxury vehicle of your choice.</p>
                 </li>
               </ol>
-              
+
               <div className="mt-6 p-4 bg-gray-50 rounded border-l-4 border-luxury-gold">
                 <p className="text-sm text-luxury-gray">
                   <strong>Note:</strong> Submission of an application does not guarantee approval. All applications are subject to credit review and approval based on our financing criteria.
