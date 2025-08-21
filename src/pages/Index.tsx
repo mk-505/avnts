@@ -12,7 +12,7 @@ const Index = () => {
         <div className="absolute inset-0 bg-cover bg-center opacity-40" style={{ backgroundImage: "url('/STEV4700.jpg')" }}></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-2xl animate-fade-in">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white mb-4 whitespace-nowrap">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white mb-4 leading-tight">
               Quality Vehicles at <span className="text-luxury-gold">Fair Prices</span>
             </h1>
             <div className="flex flex-wrap gap-4 mt-8">

@@ -392,8 +392,17 @@ const Careers = () => {
                 </div>
 
                 <div className="flex gap-4 pt-4">
-                  <Button className="flex-1 bg-luxury-black hover:bg-gray-800">
-                    Apply Now
+                  <Button 
+                    className="flex-1 bg-luxury-black hover:bg-gray-800"
+                    asChild
+                  >
+                    <a 
+                      href="https://docs.google.com/forms/d/e/1FAIpQLSeftyZyWnWnF6N0rSO3O8By8tMjqyRmgKt4HULCrStzZND1Lw/viewform"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Apply Now
+                    </a>
                   </Button>
                   <Button
                     variant="outline"
